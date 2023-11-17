@@ -1,7 +1,9 @@
 import React from "react";
 import "./Weather.css";
+import axios from "axios";
 
 export default function Weather() {
+  const apiKey = "e6fcbcft268220745f113aof372ae233";
   return (
     <div className="Weather">
       <form>
