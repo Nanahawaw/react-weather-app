@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
 import FormattedDate from "./FormattedDate";
+import LoaderComponent from "./LoaderComponent";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -66,6 +67,6 @@ export default function Weather(props) {
     const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.city}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
-    return "Loading...";
+    return <LoaderComponent />;
   }
 }
