@@ -44,7 +44,9 @@ export default function Weather(props) {
         <div className="flex">
           <div className="w-6/12 flex items-center">
             <img src={weatherData.icon} alt="mostly_cloudy" className="mr-2" />
-            <span className="text-lg">{weatherData.temperature}°C</span>
+            <span className="text-lg">
+              {Math.round(weatherData.temperature)}°C
+            </span>
           </div>
           <div className="w-6/12">
             <ul>
